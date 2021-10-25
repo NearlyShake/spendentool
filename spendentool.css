@@ -1,0 +1,1330 @@
+@charset "UTF-8";
+/*! easy-reset v1.0.1 | MIT Licence | github.com/danielneubert/easy-reset */
+*, *::before, *::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  color: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+#app {
+  overflow-x: clip;
+  min-height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  border-style: none;
+  vertical-align: middle;
+}
+
+b, strong,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: bold;
+}
+
+fieldset legend,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-bottom: 0.5em;
+}
+
+main,
+aside,
+label,
+details,
+img,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  display: block;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+}
+
+pre,
+code {
+  font-family: monospace;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+}
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+:root {
+  --color--transition: .15s ease-in-out;
+  --color--white: #FFFFFF;
+  --color--black: #000000;
+  --color--grey--100: #EDEDED;
+  --color--grey--200: #D9DADB;
+  --color--grey--300: #B1B2B4;
+  --color--grey--400: #868789;
+  --color--grey--rgb: 134, 135, 137;
+  --color--grey--500: #57585A;
+  --color--grey--600: #414141;
+  --color--yellow--200: #FFF498;
+  --color--yellow--300: #FFF065;
+  --color--yellow--400: #edd800;
+  --color--yellow--rgb: 237, 216, 0;
+  --color--yellow--500: #EBD700;
+  --color--yellow--con: white;
+  --color--orange--200: #FFCE7D;
+  --color--orange--300: #FFBA48;
+  --color--orange--400: #FF9F00;
+  --color--orange--rgb: 255, 159, 0;
+  --color--orange--500: #EA9200;
+  --color--orange--con: white;
+  --color--dark-orange--200: #f4b0b0;
+  --color--dark-orange--300: #FF7E2E;
+  --color--dark-orange--400: #FE6200;
+  --color--dark-orange--rgb: 254, 98, 0;
+  --color--dark-orange--500: #DB5400;
+  --color--dark-orange--con: white;
+  --color--red--200: #E57B7B;
+  --color--red--300: #FF4C4D;
+  --color--red--400: #EA0000;
+  --color--red--rgb: 234, 0, 0;
+  --color--red--500: #BE0000;
+  --color--red--con: white;
+  --color--pink--200: #d4b8d2;
+  --color--pink--300: #ba8ab1;
+  --color--pink--400: #EB0175;
+  --color--pink--rgb: 235, 1, 117;
+  --color--pink--500: #C70162;
+  --color--pink--con: white;
+  --color--purple--200: #CB69B8;
+  --color--purple--300: #C742AE;
+  --color--purple--400: #C701A4;
+  --color--purple--rgb: 199, 1, 164;
+  --color--purple--500: #A30087;
+  --color--purple--con: white;
+  --color--indigo--200: #B48CFC;
+  --color--indigo--300: #9054FC;
+  --color--indigo--400: #6C00FF;
+  --color--indigo--rgb: 108, 0, 255;
+  --color--indigo--500: #4D00B5;
+  --color--indigo--con: white;
+  --color--blue--200: #8FB2FF;
+  --color--blue--300: #407AFF;
+  --color--blue--400: #004EFF;
+  --color--blue--rgb: 0, 78, 255;
+  --color--blue--500: #0038B4;
+  --color--blue--con: white;
+  --color--sky-blue--200: #9BDAFF;
+  --color--sky-blue--300: #58C0FF;
+  --color--sky-blue--400: #00A5FF;
+  --color--sky-blue--rgb: 0, 165, 255;
+  --color--sky-blue--500: #037FC4;
+  --color--sky-blue--con: white;
+  --color--turquoise--200: #C3F9FF;
+  --color--turquoise--300: #8BF5FF;
+  --color--turquoise--400: #00D8EB;
+  --color--turquoise--rgb: 0, 216, 235;
+  --color--turquoise--500: #00BCCC;
+  --color--turquoise--con: white;
+  --color--green--200: #C4FF6F;
+  --color--green--300: #93F514;
+  --color--green--400: #57D801;
+  --color--green--rgb: 87, 216, 1;
+  --color--green--500: #4FC100;
+  --color--green--con: white;
+  --color--lime--200: #F6FF8B;
+  --color--lime--300: #E5F553;
+  --color--lime--400: #CDEB00;
+  --color--lime--rgb: 205, 235, 0;
+  --color--lime--500: #B6D000;
+  --color--lime--con: white;
+  --color--shadow: rgba(0, 0, 0, 1);
+  --color--shadow--50: rgba(0, 0, 0, .1);
+  --color--shadow--100: rgba(0, 0, 0, .125);
+  --color--shadow--200: rgba(0, 0, 0, .2);
+  --color--shadow--400: rgba(0, 0, 0, .4);
+  --color--shadow--500: rgba(0, 0, 0, .5);
+  --color--transparent: rgba(255, 255, 255, 0.8);
+  --background--color--header: rgba(255, 255, 255, 0.975);
+  --daterangepicker--grey--100: #ddd;
+  --daterangepicker--grey--200: #eee;
+  --daterangepicker--grey--300: #D9DADB;
+  --daterangepicker--grey--400: #ccc;
+  --daterangepicker--grey--500: #999;
+  --daterangepicker--blue: #08c;
+  --daterangepicker--green: #58D800;
+  --dummy--color: #f0f;
+  --color--grey: var(--color--grey--400);
+  --color--yellow: var(--color--yellow--400);
+  --color--orange: var(--color--orange--400);
+  --color--dark-orange: var(--color--dark-orange--400);
+  --color--red: var(--color--red--400);
+  --color--pink: var(--color--pink--400);
+  --color--purple: var(--color--purple--400);
+  --color--indigo: var(--color--indigo--400);
+  --color--blue: var(--color--blue--400);
+  --color--sky-blue: var(--color--sky-blue--400);
+  --color--turquoise: var(--color--turquoise--400);
+  --color--green: var(--color--green--400);
+  --color--lime: var(--color--lime--400);
+}
+
+:root {
+  --font--size--icon: 3.2rem;
+  --font--size--smaller: 1.3rem;
+  --font--size--small: 1.6rem;
+  --font--size--normal: 2rem;
+  --font--size--large: 2rem;
+  --font--size--larger: 3rem;
+  --font--size--huge: 3rem;
+  --font--size--huger: 5rem;
+  --font--line--height--huger: 6rem;
+  --font--line--height--huge: 3.5rem;
+  --font--line--height--larger: 3.5rem;
+  --font--line--height--large: 2.8rem;
+  --font--line--height--normal: 2.8rem;
+  --font--line--height--small: 2.4rem;
+  --font--line--height--smaller: 2.4rem;
+  --font--family-nunito: "Nunito", "Helvetica", "sans-serif";
+  --font--family--nunito-sans: "Nunito-Sans", "Helvetica", "sans-serif";
+  --font--huger: 700 var(--font--size--huger) / var(--font--line--height--huger) var(--font--family-nunito);
+  --font--huge: 400 var(--font--size--huge) / var(--font--line--height--huge) var(--font--family-nunito);
+  --font--larger: 700 var(--font--size--larger) / var(--font--line--height--larger) var(--font--family-nunito);
+  --font--large: 700 var(--font--size--large) / var(--font--line--height--large) var(--font--family-nunito);
+  --font--normal: 400 var(--font--size--normal) / var(--font--line--height--normal) var(--font--family--nunito-sans);
+  --font--small: 400 var(--font--size--small) / var(--font--line--height--small) var(--font--family--nunito-sans);
+  --font--smaller: 400 var(--font--size--smaller) / var(--font--line--height--smaller) var(--font--family--nunito-sans);
+}
+@media (max-width: 999px) {
+  :root {
+    --font--size--icon: 3.2rem;
+    --font--size--smaller: 1.3rem;
+    --font--size--small: 1.3rem;
+    --font--size--normal: 1.6rem;
+    --font--size--large: 1.6rem;
+    --font--size--larger: 2rem;
+    --font--size--huge: 2rem;
+    --font--size--huger: 2rem;
+    --font--line--height--huger: 2.8rem;
+    --font--line--height--huge: 2.8rem;
+    --font--line--height--larger: 2.8rem;
+    --font--line--height--large: 2.4rem;
+    --font--line--height--normal: 2.4rem;
+    --font--line--height--small: 2.4rem;
+    --font--line--height--smaller: 2.1rem;
+  }
+}
+
+.border--1 {
+  border-bottom: 1px solid var(--color--black);
+}
+.border--2 {
+  border-bottom: 2px solid var(--color--black);
+}
+.border--3 {
+  border-bottom: 3px solid var(--color--black);
+}
+.border--5 {
+  border-bottom: 5px solid var(--color--black);
+}
+.border--rounded {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+html, body {
+  height: 100%;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  font: var(--font--normal);
+}
+
+button {
+  background-color: var(--color--white);
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunito/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunito/Nunito-Light.otf");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunito/Nunito-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunito/Nunito-Bold.ttf");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunito/Nunito-Italic.ttf");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunito/Nunito-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunito/Nunito-LightItalic.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-Light.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-Italic.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-LightItalic.ttf");
+}
+@font-face {
+  font-family: "Nunito-Sans";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/wp-content/themes/smk/public/fonts/Nunitosans/NunitoSans-ExtraLightItalic.ttf");
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("/wp-content/themes/smk/public/fonts/icomoon/icomoon.ttf") format("truetype"), url("/wp-content/themes/smk/public/fonts/icomoon/icomoon.woff") format("woff"), url("/wp-content/themes/smk/public/fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-accessibility-parking-spot:before {
+  content: "\E91B";
+}
+
+.icon-induction-system-hearing:before {
+  content: "\E91C";
+}
+
+.icon-minus:before {
+  content: "\E91A";
+}
+
+.icon-a-big:before {
+  content: "\E900";
+}
+
+.icon-a-small:before {
+  content: "\E901";
+}
+
+.icon-accessibility-wc:before {
+  content: "\E902";
+}
+
+.icon-accessibility:before {
+  content: "\E903";
+}
+
+.icon-arrow-big:before {
+  content: "\E904";
+}
+
+.icon-arrow:before {
+  content: "\E905";
+}
+
+.icon-availability:before {
+  content: "\E906";
+}
+
+.icon-calendar:before {
+  content: "\E907";
+}
+
+.icon-close-small:before {
+  content: "\E908";
+}
+
+.icon-close:before {
+  content: "\E909";
+}
+
+.icon-download:before {
+  content: "\E90A";
+}
+
+.icon-drop-down-arrow:before {
+  content: "\E90B";
+}
+
+.icon-facebook:before {
+  content: "\E90C";
+}
+
+.icon-hamburger-menue:before {
+  content: "\E90D";
+}
+
+.icon-info:before {
+  content: "\E90E";
+}
+
+.icon-instagram:before {
+  content: "\E90F";
+}
+
+.icon-lettersize:before {
+  content: "\E910";
+}
+
+.icon-link:before {
+  content: "\E911";
+}
+
+.icon-mail:before {
+  content: "\E912";
+}
+
+.icon-new-tab:before {
+  content: "\E913";
+}
+
+.icon-play:before {
+  content: "\E914";
+}
+
+.icon-plus-small:before {
+  content: "\E915";
+}
+
+.icon-plus:before {
+  content: "\E916";
+}
+
+.icon-search:before {
+  content: "\E917";
+}
+
+.icon-twitter:before {
+  content: "\E918";
+}
+
+.icon-youtube:before {
+  content: "\E919";
+}
+
+* {
+  float: none !important;
+}
+
+form,
+.row,
+.impress-wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+form,
+.row,
+.columns {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+form::before, form::after, form.gift-donation,
+.row::before,
+.row::after,
+.row.gift-donation,
+.columns::before,
+.columns::after,
+.columns.gift-donation {
+  display: none;
+}
+
+form {
+  margin: 0 auto !important;
+}
+
+header {
+  display: none;
+}
+
+.row > .columns > label,
+.row > .columns > .row.columns > label {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font: var(--font--larger);
+  color: var(--color--black);
+}
+
+.amount-wrapper .button-wrapper {
+  grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 699px) {
+  .amount-wrapper .button-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse > .recurring-wrapper {
+  width: 100%;
+}
+
+.rythm_target-wrapper .onetime-recurring-wrapper.row.collapse,
+.rythm_target-wrapper .onetime-recurring-wrapper .row.collapse,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse > .recurring-wrapper > .row,
+.payment-component-wrapper .payment-wrapper .medium-collapse {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 699px) {
+  .rythm_target-wrapper .onetime-recurring-wrapper.row.collapse,
+.rythm_target-wrapper .onetime-recurring-wrapper .row.collapse,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse > .recurring-wrapper > .row,
+.payment-component-wrapper .payment-wrapper .medium-collapse {
+    grid-template-columns: 1fr;
+  }
+}
+
+.payment-component-wrapper #payment_method_debit,
+.payment-component-wrapper #payment_method_banktransfer {
+  margin-top: 2rem !important;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 699px) {
+  .payment-component-wrapper #payment_method_debit,
+.payment-component-wrapper #payment_method_banktransfer {
+    grid-template-columns: 1fr;
+  }
+}
+.payment-component-wrapper #payment_method_debit .checkbox-wrapper,
+.payment-component-wrapper #payment_method_banktransfer .checkbox-wrapper {
+  grid-column: 1/span 3;
+}
+@media (max-width: 699px) {
+  .payment-component-wrapper #payment_method_debit .checkbox-wrapper,
+.payment-component-wrapper #payment_method_banktransfer .checkbox-wrapper {
+    grid-column: span 1;
+  }
+}
+
+.amount-wrapper .button-wrapper,
+.rythm_target-wrapper .onetime-recurring-wrapper.row.collapse,
+.rythm_target-wrapper .onetime-recurring-wrapper .row.collapse,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse > .recurring-wrapper > .row,
+.payment-component-wrapper .payment-wrapper .medium-collapse,
+.payment-component-wrapper #payment_method_debit,
+.payment-component-wrapper #payment_method_banktransfer {
+  gap: 2rem 3rem;
+  padding: 0;
+  width: 100%;
+  display: grid;
+}
+.amount-wrapper .button-wrapper .columns,
+.amount-wrapper .button-wrapper > .columns,
+.rythm_target-wrapper .onetime-recurring-wrapper.row.collapse .columns,
+.rythm_target-wrapper .onetime-recurring-wrapper.row.collapse > .columns,
+.rythm_target-wrapper .onetime-recurring-wrapper .row.collapse .columns,
+.rythm_target-wrapper .onetime-recurring-wrapper .row.collapse > .columns,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse > .recurring-wrapper > .row .columns,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse > .recurring-wrapper > .row > .columns,
+.payment-component-wrapper .payment-wrapper .medium-collapse .columns,
+.payment-component-wrapper .payment-wrapper .medium-collapse > .columns,
+.payment-component-wrapper #payment_method_debit .columns,
+.payment-component-wrapper #payment_method_debit > .columns,
+.payment-component-wrapper #payment_method_banktransfer .columns,
+.payment-component-wrapper #payment_method_banktransfer > .columns {
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 699px) {
+  .payment-component-wrapper #payment_method_debit,
+.payment-component-wrapper #payment_method_banktransfer {
+    gap: 0;
+  }
+}
+
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse {
+  margin-top: 2rem !important;
+}
+@media (max-width: 699px) {
+  .rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse {
+    margin-top: 0 !important;
+  }
+}
+
+.amount-wrapper {
+  padding: 0;
+  width: 100%;
+  display: grid;
+  gap: 2rem 3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 699px) {
+  .amount-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.amount-wrapper > .small-12 {
+  grid-column: span 3;
+}
+@media (max-width: 699px) {
+  .amount-wrapper > .small-12 {
+    grid-column: span 1;
+  }
+}
+.amount-wrapper > .small-8 {
+  grid-column: span 2;
+}
+@media (max-width: 699px) {
+  .amount-wrapper > .small-8 {
+    grid-column: span 1;
+  }
+}
+.amount-wrapper > .button-wrapper {
+  grid-column: span 3;
+}
+@media (max-width: 699px) {
+  .amount-wrapper > .button-wrapper {
+    grid-column: span 1;
+  }
+}
+.amount-wrapper > .columns {
+  width: 100%;
+}
+.amount-wrapper > .columns.slider-wrapper {
+  background: transparent;
+}
+.amount-wrapper > .columns.slider-wrapper .slider {
+  position: relative;
+  margin: 0 1rem !important;
+}
+.amount-wrapper > .columns.slider-wrapper .slider::before, .amount-wrapper > .columns.slider-wrapper .slider::after {
+  top: 21px;
+  width: 9px;
+  height: 9px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color--grey--300);
+}
+.amount-wrapper > .columns.slider-wrapper .slider::before {
+  left: 0;
+}
+.amount-wrapper > .columns.slider-wrapper .slider::after {
+  right: 0;
+}
+.amount-wrapper > .columns.slider-wrapper .slider input[type=range] {
+  z-index: 1;
+  position: relative;
+}
+.amount-wrapper > .columns.slider-wrapper .slider input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.1rem;
+  background: var(--color--grey--300);
+}
+.amount-wrapper > .columns.slider-wrapper .slider input[type=range]::-webkit-slider-thumb {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transform: translateY(75%);
+  background-color: var(--color--black);
+}
+
+.amount-wrapper .button-wrapper .big label,
+.amount-wrapper .button-wrapper .big button,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label {
+  cursor: pointer;
+  position: relative;
+  padding: 0.8rem 2rem;
+  font-weight: normal;
+  border-radius: 100vw;
+  border: 2px solid var(--color--black);
+  transition: border var(--color--transition);
+  margin-bottom: 0;
+  width: 100% !important;
+  background: transparent;
+  border-radius: 100vw !important;
+}
+.amount-wrapper .button-wrapper .big label::before,
+.amount-wrapper .button-wrapper .big button::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label::before,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label::before,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label::before,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label::before {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  content: "";
+  position: absolute;
+  border-radius: 100vw;
+  transition: background-color var(--color--transition), transform var(--color--transition), left var(--color--transition), right var(--color--transition);
+}
+.amount-wrapper .button-wrapper .big label p,
+.amount-wrapper .button-wrapper .big button p,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label p,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label p,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label p,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label p,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label p {
+  position: relative;
+}
+.amount-wrapper .button-wrapper .big label::after,
+.amount-wrapper .button-wrapper .big button::after,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label::after,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label::after,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label::after,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label::after,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label::after {
+  display: none;
+}
+.amount-wrapper .button-wrapper .big label span,
+.amount-wrapper .button-wrapper .big button span,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label span,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label span,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label span,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label span,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label span {
+  position: relative;
+}
+.amount-wrapper .button-wrapper .big label > i,
+.amount-wrapper .button-wrapper .big button > i,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label > i,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label > i,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label > i,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label > i,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label > i {
+  display: none;
+}
+.amount-wrapper .button-wrapper .big label,
+.amount-wrapper .button-wrapper .big label span,
+.amount-wrapper .button-wrapper .big label strong,
+.amount-wrapper .button-wrapper .big button,
+.amount-wrapper .button-wrapper .big button span,
+.amount-wrapper .button-wrapper .big button strong,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label span,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label strong,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label span,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label strong,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label span,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label strong,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label span,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label strong,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label span,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label strong {
+  height: auto;
+  display: block;
+  font: var(--font--normal);
+  font-weight: bold;
+}
+.amount-wrapper .button-wrapper .big label small,
+.amount-wrapper .button-wrapper .big button small,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label small,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label small,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label small,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label small,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label small {
+  display: none;
+}
+@media (pointer: fine) {
+  .amount-wrapper .button-wrapper .big label:hover,
+.amount-wrapper .button-wrapper .big button:hover,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label:hover,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label:hover,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label:hover,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label:hover,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label:hover {
+    background: transparent;
+    color: var(--color--REPLACE_COLOR_NAME--con);
+    border-color: var(--color--REPLACE_COLOR_NAME--400);
+  }
+  .amount-wrapper .button-wrapper .big label:hover::before,
+.amount-wrapper .button-wrapper .big button:hover::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio] + label:hover::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio] + label:hover::before,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio] + label:hover::before,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio] + label:hover::before,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio] + label:hover::before {
+    background: var(--color--REPLACE_COLOR_NAME--400);
+  }
+}
+
+.amount-wrapper .button-wrapper .big button::before {
+  z-index: -1;
+}
+
+.amount-wrapper .button-wrapper .big input:checked + label,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio]:checked + label,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio]:checked + label,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio]:checked + label,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio]:checked + label,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio]:checked + label {
+  color: var(--color--white);
+  border-color: var(--color--black);
+}
+.amount-wrapper .button-wrapper .big input:checked + label::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio]:checked + label::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio]:checked + label::before,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio]:checked + label::before,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio]:checked + label::before,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio]:checked + label::before {
+  left: 0;
+  right: 0;
+  transform: scaleY(1.1);
+  border-color: var(--color--black);
+  background-color: var(--color--black);
+}
+.amount-wrapper .button-wrapper .big input:checked + label p,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio]:checked + label p,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio]:checked + label p,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio]:checked + label p,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio]:checked + label p,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio]:checked + label p {
+  color: var(--color--white);
+}
+@media (pointer: fine) {
+  .amount-wrapper .button-wrapper .big input:checked + label:hover,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio]:checked + label:hover,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio]:checked + label:hover,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio]:checked + label:hover,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio]:checked + label:hover,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio]:checked + label:hover {
+    color: var(--color--white);
+    border-color: var(--color--black);
+  }
+  .amount-wrapper .button-wrapper .big input:checked + label:hover::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio]:checked + label:hover::before,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio]:checked + label:hover::before,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio]:checked + label:hover::before,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio]:checked + label:hover::before,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio]:checked + label:hover::before {
+    left: 0;
+    right: 0;
+    transform: scaleY(1.1);
+    border-color: var(--color--black);
+    background-color: var(--color--black);
+  }
+  .amount-wrapper .button-wrapper .big input:checked + label:hover p,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:first-child input[type=radio]:checked + label:hover p,
+.rythm_target-wrapper .onetime-recurring-wrapper .columns:last-child input[type=radio]:checked + label:hover p,
+.rythm_target-wrapper .onetime-recurring-wrapper + .row.collapse .columns input[type=radio]:checked + label:hover p,
+.payment-component-wrapper .payment-wrapper .columns:first-child input[type=radio]:checked + label:hover p,
+.payment-component-wrapper .payment-wrapper .columns:last-child input[type=radio]:checked + label:hover p {
+    color: var(--color--white);
+  }
+}
+
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper input {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-height: 5rem;
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
+  background-color: var(--color--white);
+  border: 1px solid var(--color--grey--300);
+  transition: border var(--color--transition);
+  margin: 2rem 0 0;
+  width: 100% !important;
+  box-shadow: none !important;
+  border-radius: 100vw !important;
+  font-size: var(--font--size--normal);
+  border: 1px solid var(--color--grey--300) !important;
+  transition: border var(--color--transition) !important;
+}
+.input-wrapper input + label {
+  left: 1.5rem;
+  padding: 0 0.5rem;
+  position: absolute;
+  font: var(--font--smaller);
+  max-width: calc(100% - 3rem);
+  color: var(--color--grey--300);
+  overflow: hidden;
+  background-color: var(--color--white);
+  top: 0;
+  transform: translateY(-50%);
+  opacity: 1 !important;
+  top: 0 !important;
+  transition: color var(--color--transition) !important;
+}
+@media (pointer: fine) {
+  .input-wrapper input:hover {
+    border-color: var(--color--grey--400) !important;
+  }
+  .input-wrapper input:hover + label {
+    color: var(--color--grey--400) !important;
+  }
+}
+.input-wrapper input:active, .input-wrapper input:focus {
+  border-color: var(--color--black) !important;
+}
+.input-wrapper input:active + label, .input-wrapper input:focus + label {
+  color: var(--color--black) !important;
+}
+.input-wrapper input.ng-invalid.ng-touched {
+  border-color: var(--color--red) !important;
+}
+.input-wrapper input.ng-invalid.ng-touched + label {
+  color: var(--color--red) !important;
+}
+.input-wrapper.info > i.twingle-info {
+  top: 50%;
+  right: 0.5rem;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: transparent;
+}
+.input-wrapper.info > i.twingle-info::before {
+  position: absolute;
+}
+.input-wrapper.info > i.twingle-info:hover {
+  background-color: transparent;
+}
+.input-wrapper.info > i.twingle-info:hover::before {
+  color: var(--color--REPLACE_COLOR_NAME--400);
+}
+
+.row > .columns.checkbox-wrapper {
+  margin-top: 1rem !important;
+  position: relative;
+  --form-box--size: 2.4rem;
+  --form-box--padding: 1.5rem;
+  --form-box--text-padding: 0;
+}
+@media (max-width: 1792px) {
+  .row > .columns.checkbox-wrapper {
+    --form-box--padding: .75rem;
+  }
+}
+.row > .columns.checkbox-wrapper label.error {
+  top: 28px;
+  margin: 0;
+  left: 32px;
+  display: block;
+  position: absolute;
+  color: var(--color--red);
+  font: var(--font--smaller);
+}
+.row > .columns.checkbox-wrapper input {
+  display: none;
+}
+.row > .columns.checkbox-wrapper input + label {
+  cursor: pointer;
+  min-height: var(--form-box--size);
+  transition: color var(--color--transition);
+  padding: var(--form-box--text-padding) 0 0 calc(var(--form-box--size) + var(--form-box--padding));
+  margin: 0;
+  font: var(--font--normal);
+}
+.row > .columns.checkbox-wrapper input + label::before {
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--form-box--size);
+  height: var(--form-box--size);
+  border: 1px solid var(--color--grey--300);
+  transition: border var(--color--transition);
+}
+.row > .columns.checkbox-wrapper input + label::before {
+  border-radius: 6px;
+}
+.row > .columns.checkbox-wrapper input + label::after {
+  width: 8px;
+  opacity: 0;
+  top: calc(var(--form-box--size) / 2);
+  content: "";
+  height: 14px;
+  left: calc(var(--form-box--size) / 2);
+  display: block;
+  position: absolute;
+  border-radius: 0 0 1.5px;
+  transform: translate(-50%, calc(-50% - 2px)) rotate(45deg);
+  background: radial-gradient(circle 1.5px, var(--color--black) 99%, transparent 100%) left 5.5px top 5.5px, radial-gradient(circle 1.5px, var(--color--black) 99%, transparent 100%) left 2.5px top 8.5px, linear-gradient(0deg, transparent 0%, transparent 89.2847142857%, var(--color--white) 89.2857142857%, var(--color--white) 100%), linear-gradient(-90deg, transparent 0%, transparent 81.249%, var(--color--white) 81.25%, var(--color--white) 100%), linear-gradient(180deg, transparent 0%, transparent 78.5714285714%, var(--color--black) 78.5714285714%, var(--color--black) 100%), linear-gradient(90deg, transparent 0%, transparent 62.5%, var(--color--black) 62.5%, var(--color--black) 100%);
+}
+.row > .columns.checkbox-wrapper input + label::before {
+  top: 3px;
+}
+.row > .columns.checkbox-wrapper input + label::after {
+  top: calc(var(--form-box--size) / 2 + 3px);
+}
+.row > .columns.checkbox-wrapper input + label a {
+  text-decoration: underline;
+  transition: color var(--color--transition);
+}
+@media (pointer: fine) {
+  .row > .columns.checkbox-wrapper input + label a:hover {
+    color: var(--color--REPLACE_COLOR_NAME--400);
+  }
+}
+@media (max-width: 1399px) {
+  .row > .columns.checkbox-wrapper input + label::before {
+    top: 1px;
+  }
+  .row > .columns.checkbox-wrapper input + label::after {
+    top: calc(var(--form-box--size) / 2 + 1px);
+  }
+}
+@media (pointer: fine) {
+  .row > .columns.checkbox-wrapper input + label:hover::before {
+    border-color: var(--color--grey--400);
+  }
+}
+.row > .columns.checkbox-wrapper input:checked + label::before {
+  border-color: var(--color--black);
+}
+.row > .columns.checkbox-wrapper input:checked + label::after {
+  opacity: 1;
+  transform: translate(-50%, calc(-50% - 2px)) rotate(45deg);
+}
+
+.row.columns button.button.grey[type=submit],
+.row.columns button.button.arrow[type=submit],
+.row.small-collapse.step-navigation .small-12.columns span {
+  margin: 0;
+  height: 50px;
+  display: flex;
+  text-align: left;
+  position: relative;
+  align-items: center;
+  text-transform: none;
+  padding: 4px 0 0 6rem;
+  background: transparent;
+  font: var(--font--larger);
+  color: var(--color--black);
+}
+.row.columns button.button.grey[type=submit]::before,
+.row.columns button.button.arrow[type=submit]::before,
+.row.small-collapse.step-navigation .small-12.columns span::before {
+  top: 0;
+  left: 0;
+  width: 5rem;
+  speak: never;
+  height: 5rem;
+  display: flex;
+  line-height: 1;
+  content: "\E905";
+  font-size: 3.4rem;
+  position: absolute;
+  font-style: normal;
+  border-radius: 50%;
+  align-items: center;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  justify-content: center;
+  color: var(--color--black);
+  font-family: "icomoon" !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border: 2px solid var(--color--black);
+  transition: border var(--color--transition), color var(--color--transition);
+}
+@media (pointer: fine) {
+  .row.columns button.button.grey[type=submit]:hover,
+.row.columns button.button.arrow[type=submit]:hover,
+.row.small-collapse.step-navigation .small-12.columns span:hover {
+    color: var(--color--REPLACE_COLOR_NAME--400);
+  }
+  .row.columns button.button.grey[type=submit]:hover::before,
+.row.columns button.button.arrow[type=submit]:hover::before,
+.row.small-collapse.step-navigation .small-12.columns span:hover::before {
+    color: var(--color--REPLACE_COLOR_NAME--400);
+    border-color: var(--color--REPLACE_COLOR_NAME--400);
+  }
+  .row.columns button.button.grey[type=submit]:hover::after,
+.row.columns button.button.arrow[type=submit]:hover::after,
+.row.small-collapse.step-navigation .small-12.columns span:hover::after {
+    color: var(--color--REPLACE_COLOR_NAME--400);
+  }
+}
+.row.columns button.button.grey[type=submit] br,
+.row.columns button.button.arrow[type=submit] br,
+.row.small-collapse.step-navigation .small-12.columns span br {
+  content: "";
+}
+.row.columns button.button.grey[type=submit] br::after,
+.row.columns button.button.arrow[type=submit] br::after,
+.row.small-collapse.step-navigation .small-12.columns span br::after {
+  content: "\A0\2013\A0";
+}
+.row.columns button.button.grey[type=submit] + p.hint,
+.row.columns button.button.arrow[type=submit] + p.hint,
+.row.small-collapse.step-navigation .small-12.columns span + p.hint {
+  padding: 0;
+  display: block;
+  margin: 3rem 0 0;
+  text-align: left;
+  font: var(--font--normal);
+  color: var(--color--black);
+  background-color: transparent;
+}
+.row.columns button.button.grey[type=submit] + p.hint i,
+.row.columns button.button.arrow[type=submit] + p.hint i,
+.row.small-collapse.step-navigation .small-12.columns span + p.hint i {
+  display: none;
+}
+
+.row.columns button.button.arrow[type=submit] {
+  margin: 2rem 0;
+  color: transparent;
+}
+@media (pointer: fine) {
+  .row.columns button.button.arrow[type=submit]:hover {
+    color: transparent;
+  }
+}
+.row.columns button.button.arrow[type=submit]::after {
+  border: 0;
+  top: initial;
+  right: initial;
+  display: block;
+  content: "Zur Zahlungsart";
+  position: absolute;
+  color: var(--color--black);
+  transition: color var(--color--transition);
+}
+
+.row.small-collapse.step-navigation .small-12.columns .twingle-arrow_left_solo {
+  display: none;
+}
+.row.small-collapse.step-navigation .small-12.columns span {
+  margin: 0 0 2rem;
+  color: transparent;
+}
+@media (pointer: fine) {
+  .row.small-collapse.step-navigation .small-12.columns span:hover {
+    color: transparent;
+  }
+}
+.row.small-collapse.step-navigation .small-12.columns span::before {
+  transform: rotate(180deg);
+}
+.row.small-collapse.step-navigation .small-12.columns span::after {
+  border: 0;
+  top: initial;
+  right: initial;
+  display: block;
+  content: "Zum Spendenbetrag";
+  position: absolute;
+  color: var(--color--black);
+  transition: color var(--color--transition);
+}
+
+label[for=transaction-amount] {
+  margin-top: 0 !important;
+}
+@media (max-width: 699px) {
+  label[for=transaction-amount] {
+    margin-bottom: 0 !important;
+  }
+}
+
+.row.columns > h1 {
+  text-align: left;
+  font: var(--font--larger);
+}
+
+footer .impress-wrapper {
+  margin: 0 auto;
+  text-align: left;
+}
+footer .impress-wrapper a {
+  padding: 0;
+  font: var(--font--normal);
+  color: var(--color--black);
+  text-decoration: underline;
+  transition: color var(--color--transition);
+}
+@media (pointer: fine) {
+  footer .impress-wrapper a:hover {
+    color: var(--color--REPLACE_COLOR_NAME--400);
+  }
+}
+footer .impress-wrapper a + a {
+  margin-left: 4rem;
+  position: relative;
+}
+footer .impress-wrapper a + a::before {
+  top: -1px;
+  content: "\2022";
+  left: -2.25rem;
+  display: block;
+  position: absolute;
+  transform: scale(1.4);
+  color: var(--color--black);
+}
+
+.payment-component-wrapper #payment_method_banktransfer .columns {
+  grid-column: span 2;
+}
+@media (max-width: 699px) {
+  .payment-component-wrapper #payment_method_banktransfer .columns {
+    grid-column: span 1;
+  }
+}
+.payment-component-wrapper #payment_method_banktransfer .columns .callout {
+  padding: 0;
+  height: 50px;
+  display: flex;
+  margin: 2rem 0 0;
+  align-items: center;
+  font: var(--font--normal);
+  color: var(--color--black);
+  justify-content: flex-start;
+  background-color: transparent;
+}
